@@ -1,0 +1,174 @@
+{
+  "categories": [
+    {
+      "id": "67nllublme9",
+      "name": "CPU Processors",
+      "slug": "cpu-processors",
+      "description": "Browse CPU Processors products",
+      "icon": "📦",
+      "productCount": 33
+    },
+    {
+      "id": "1ommnn3r5wq",
+      "name": "Computer Cases",
+      "slug": "computer-cases",
+      "description": "Browse Computer Cases products",
+      "icon": "📦",
+      "productCount": 2
+    },
+    {
+      "id": "uy4mz20iys",
+      "name": "Internal Solid State Drives",
+      "slug": "internal-solid-state-drives",
+      "description": "Browse Internal Solid State Drives products",
+      "icon": "📦",
+      "productCount": 10
+    },
+    {
+      "id": "40ve1hgzdde",
+      "name": "Internal Power Supplies",
+      "slug": "internal-power-supplies",
+      "description": "Browse Internal Power Supplies products",
+      "icon": "📦",
+      "productCount": 17
+    },
+    {
+      "id": "ov5t9k92jd",
+      "name": "Vocal",
+      "slug": "vocal",
+      "description": "Browse Vocal products",
+      "icon": "📦",
+      "productCount": 2
+    },
+    {
+      "id": "he1dyy97xhk",
+      "name": "Memory",
+      "slug": "memory",
+      "description": "Browse Memory products",
+      "icon": "📦",
+      "productCount": 17
+    },
+    {
+      "id": "i44x0j3fbb",
+      "name": "Silicon Grease",
+      "slug": "silicon-grease",
+      "description": "Browse Silicon Grease products",
+      "icon": "📦",
+      "productCount": 2
+    },
+    {
+      "id": "sh9arg9x5p",
+      "name": "Screwdrivers",
+      "slug": "screwdrivers",
+      "description": "Browse Screwdrivers products",
+      "icon": "📦",
+      "productCount": 1
+    },
+    {
+      "id": "fgwfamfmp5e",
+      "name": "Graphics Cards",
+      "slug": "graphics-cards",
+      "description": "Browse Graphics Cards products",
+      "icon": "📦",
+      "productCount": 49
+    },
+    {
+      "id": "v4a7qsgdhri",
+      "name": "Motherboards",
+      "slug": "motherboards",
+      "description": "Browse Motherboards products",
+      "icon": "📦",
+      "productCount": 17
+    },
+    {
+      "id": "2xutrrrwde9",
+      "name": "Case Fans",
+      "slug": "case-fans",
+      "description": "Browse Case Fans products",
+      "icon": "📦",
+      "productCount": 1
+    },
+    {
+      "id": "sa3nj4co2j",
+      "name": "Computer Screws",
+      "slug": "computer-screws",
+      "description": "Browse Computer Screws products",
+      "icon": "📦",
+      "productCount": 1
+    },
+    {
+      "id": "vds8th9hpck",
+      "name": "Racks & Cabinets",
+      "slug": "racks-cabinets",
+      "description": "Browse Racks & Cabinets products",
+      "icon": "📦",
+      "productCount": 2
+    },
+    {
+      "id": "7gkmk34e43q",
+      "name": "Monitors",
+      "slug": "monitors",
+      "description": "Browse Monitors products",
+      "icon": "📦",
+      "productCount": 50
+    },
+    {
+      "id": "50203x5sl9y",
+      "name": "Towers",
+      "slug": "towers",
+      "description": "Browse Towers products",
+      "icon": "📦",
+      "productCount": 2
+    },
+    {
+      "id": "nn40fn8tjlj",
+      "name": "Traditional Laptops",
+      "slug": "traditional-laptops",
+      "description": "Browse Traditional Laptops products",
+      "icon": "📦",
+      "productCount": 1
+    },
+    {
+      "id": "xqtjkmga5si",
+      "name": "Computers & Tablets",
+      "slug": "computers-tablets",
+      "description": "Browse Computers & Tablets products",
+      "icon": "📦",
+      "productCount": 1
+    },
+    {
+      "id": "9mv0pfw6cuu",
+      "name": "Minis",
+      "slug": "minis",
+      "description": "Browse Minis products",
+      "icon": "📦",
+      "productCount": 2
+    },
+    {
+      "id": "zthjzemqk7",
+      "name": "All-in-Ones",
+      "slug": "all-in-ones",
+      "description": "Browse All-in-Ones products",
+      "icon": "📦",
+      "productCount": 1
+    },
+    {
+      "id": "w2tl5kvcuek",
+      "name": "Internal Components",
+      "slug": "internal-components",
+      "description": "Browse Internal Components products",
+      "icon": "📦",
+      "productCount": 3
+    },
+    {
+      "id": "mcvhsfalp3",
+      "name": "External Solid State Drives",
+      "slug": "external-solid-state-drives",
+      "description": "Browse External Solid State Drives products",
+      "icon": "📦",
+      "productCount": 1
+    }
+  ],
+  "totalCount": 21,
+  "processedAt": "2026-03-26T08:20:25.824Z"
+}
