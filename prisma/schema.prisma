@@ -1,0 +1,141 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Category {
+  id           String    @id @default(cuid())
+  name         String
+  slug         String    @unique
+  description  String
+  icon         String
+  productCount Int       @default(0)
+  products     Product[]
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@index([slug])
+}
+
+model Product {
+  id            String       @id @default(cuid())
+  name          String
+  slug          String       @unique
+  description   String       @db.Text
+  price         Float
+  originalPrice Float?
+  image         String
+  brand         String
+  specs         Json
+  rating        Float        @default(0)
+  reviewCount   Int          @default(0)
+  inStock       Boolean      @default(true)
+  isFeatured    Boolean      @default(false)
+  isNewArrival  Boolean      @default(false)
+  categoryId    String
+  category      Category     @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  cartItems     CartItem[]
+  bundleItems   BundleItem[]
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+
+  @@index([slug])
+  @@index([categoryId])
+  @@index([brand])
+  @@index([isFeatured])
+  @@index([isNewArrival])
+}
+
+model Cart {
+  id                String            @id @default(cuid())
+  externalSessionId String?
+  status            String            @default("active")
+  source            String            @default("storefront")
+  items             CartItem[]
+  checkoutSessions  CheckoutSession[]
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  @@index([externalSessionId])
+  @@index([status])
+}
+
+model CartItem {
+  id           String   @id @default(cuid())
+  cartId       String
+  productId    String
+  quantity     Int      @default(1)
+  unitPrice    Float
+  productName  String
+  productImage String
+  productBrand String
+  categoryName String?
+  addedAt      DateTime @default(now())
+  cart         Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  product      Product  @relation(fields: [productId], references: [id], onDelete: Restrict)
+
+  @@index([cartId])
+  @@index([productId])
+}
+
+model Bundle {
+  id                String            @id @default(cuid())
+  externalSessionId String?
+  sourceBuildId     String?
+  name              String
+  summary           String?
+  status            String            @default("ready")
+  totalPrice        Float             @default(0)
+  currency          String            @default("VND")
+  items             BundleItem[]
+  checkoutSessions  CheckoutSession[]
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  @@index([externalSessionId])
+  @@index([sourceBuildId])
+  @@index([status])
+}
+
+model BundleItem {
+  id           String   @id @default(cuid())
+  bundleId      String
+  productId     String
+  slot          String
+  quantity      Int      @default(1)
+  unitPrice     Float
+  reason        String?
+  productName   String
+  productImage  String
+  productBrand  String
+  categoryName  String?
+  bundle        Bundle   @relation(fields: [bundleId], references: [id], onDelete: Cascade)
+  product       Product  @relation(fields: [productId], references: [id], onDelete: Restrict)
+
+  @@index([bundleId])
+  @@index([productId])
+  @@index([slot])
+}
+
+model CheckoutSession {
+  id          String   @id @default(cuid())
+  cartId      String
+  bundleId    String
+  status      String   @default("ready")
+  checkoutUrl String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  completedAt DateTime?
+  cart        Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  bundle      Bundle   @relation(fields: [bundleId], references: [id], onDelete: Cascade)
+
+  @@index([cartId])
+  @@index([bundleId])
+  @@index([status])
+}

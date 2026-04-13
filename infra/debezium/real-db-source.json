@@ -1,0 +1,20 @@
+{
+  "name": "real-db-source",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "plugin.name": "pgoutput",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "postgres123",
+    "database.dbname": "ecommerce",
+    "database.server.name": "dbserver1",
+    "slot.name": "conversational_commerce_slot",
+    "publication.autocreate.mode": "filtered",
+    "topic.prefix": "dbserver1",
+    "schema.include.list": "public",
+    "table.include.list": "public.Category,public.Product,public.Cart,public.CartItem,public.Bundle,public.BundleItem,public.CheckoutSession",
+    "include.schema.changes": "false",
+    "tombstones.on.delete": "false"
+  }
+}

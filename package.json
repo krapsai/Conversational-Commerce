@@ -1,0 +1,40 @@
+{
+  "name": "conversational-commerce",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "tsx --test src/lib/catalog.test.ts src/lib/cart-pricing.test.ts",
+    "agent:dev": "cd agent_service && py -3 -m uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload",
+    "agent:cdc": "cd agent_service && py -3 -m app.cdc.consumer",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.6.0",
+    "@prisma/client": "^7.5.0",
+    "dotenv": "^17.3.1",
+    "lucide-react": "^0.475.0",
+    "next": "^15.2.4",
+    "pg": "^8.20.0",
+    "prisma": "^7.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.0.17",
+    "@types/node": "^22.13.14",
+    "@types/react": "^19.0.12",
+    "eslint": "^9.23.0",
+    "eslint-config-next": "^15.2.4",
+    "tailwindcss": "^4.0.17",
+    "tsx": "^4.21.0",
+    "typescript": "^5.8.2"
+  }
+}
