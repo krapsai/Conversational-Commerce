@@ -52,6 +52,7 @@ __pycache__/
 
 # scraped raw product dumps
 extracted_amazon_products*.json
+scraper/
 
 # local setup notes not intended for git history
 DATABASE_SETUP.md
