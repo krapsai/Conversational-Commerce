@@ -49,3 +49,6 @@ next-env.d.ts
 __pycache__/
 *.pyc
 .venv/
+
+# scraped raw product dumps
+extracted_amazon_products*.json
